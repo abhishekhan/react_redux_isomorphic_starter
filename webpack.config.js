@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
   context: __dirname + "/client",
   entry: "./index",
@@ -15,5 +17,10 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      React: 'react' // ReactJS module name in node_modules folder
+    })
+  ]
 }

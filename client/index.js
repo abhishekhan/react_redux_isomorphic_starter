@@ -1,8 +1,24 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+import Home from './routes/Home';
+import About from './routes/About'
 
-const Hello = () => (
-  <div>Hello World
-  </div>);
+const Root = () => (
+  <Router>
+    <div>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+      </ul>
+      <hr/>
+      <Route exact path="/" component={Home}/>
+      <Route path="/about" component={About}/>
+    </div>
+  </Router>
+);
 
-ReactDOM.render(<Hello/>, document.getElementById('app'))
+ReactDOM.render(<Root/>, document.getElementById('app'))
