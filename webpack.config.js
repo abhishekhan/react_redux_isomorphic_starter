@@ -22,5 +22,6 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: 'react' // ReactJS module name in node_modules folder
     })
-  ]
+  ],
+  devtool: "source-map"
 }
