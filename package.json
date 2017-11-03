@@ -1,0 +1,37 @@
+{
+  "name": "react_redux_isomorphic_starter",
+  "version": "1.0.0",
+  "description": "React Redux Nodejs Isomorphic starter kit for projects",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel -d ./build ./server",
+    "prebuild": "rm -rf build/*",
+    "dev": "NODE_ENV=development node ./build/index.js",
+    "predev": "npm run build",
+    "standard_fix": "standard --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Isomorphic",
+    "react",
+    "redux",
+    "nodejs"
+  ],
+  "author": "Abhishekk Handa (abhishekk.handa1991@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "nodemon": "^1.12.1",
+    "standard": "^10.0.3"
+  }
+}
