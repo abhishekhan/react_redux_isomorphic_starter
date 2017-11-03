@@ -6,7 +6,6 @@ import {
 import Home from './routes/Home';
 import Counter from './routes/Counter'
 import rootReducer from './reducers'
-
 import { createBrowserHistory } from 'history'
 import { applyMiddleware, compose, createStore } from 'redux'
 import { connectRouter, routerMiddleware, ConnectedRouter } from 'connected-react-router'

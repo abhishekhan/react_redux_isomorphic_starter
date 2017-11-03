@@ -5,7 +5,9 @@ module.exports = {
   entry: "./index",
   output: {
     path: __dirname + "/dist",
-    filename: "bundle.js"
+    filename: "[name].bundle.js",
+    chunkFilename: '[name].bundle.js',
+    publicPath: "app/"
   },
   module: {
     rules: [
@@ -22,6 +24,5 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: 'react' // ReactJS module name in node_modules folder
     })
-  ],
-  devtool: "source-map"
+  ]
 }

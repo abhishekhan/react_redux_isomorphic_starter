@@ -20,16 +20,19 @@
   "author": "Abhishekk Handa (abhishekk.handa1991@gmail.com)",
   "license": "ISC",
   "dependencies": {
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "body-parser": "^1.18.2",
     "connected-react-router": "^4.2.3",
     "express": "^4.16.2",
     "history": "^4.7.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-loadable": "^5.3.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "uglifyjs-webpack-plugin": "^1.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -4,11 +4,26 @@ import path from 'path';
 
 const app = express();
 app.use(bodyParser.json());
-
 app.use('/app',express.static(path.resolve(__dirname,'../dist')))
+app.use('/public', express.static(path.resolve(__dirname,'../server/static')))
+
+const page = `
+<!DOCTYPE html>
+<html>
+<head>
+  <title>React Starter App</title>
+</head>
+<body>
+  <div id="app"/>
+  <script type="text/javascript" src="/app/main.bundle.js"></script>
+</body>
+</html>
+`
+
 app.use('*', (req,res)=>
-    res.sendFile(path.resolve(__dirname,'../server/static/index.html'))
+  res.send(page)
 )
+
 
 const port = process.env.PORT || 3000;
 const env = process.env.NODE_ENV || 'production';
